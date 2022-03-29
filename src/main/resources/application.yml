@@ -1,0 +1,21 @@
+
+server:
+  port: 8080
+
+spring:
+  data:
+    jdbc:
+      repositories:
+        enabled: true
+  datasource:
+    username: postgres
+    password: mysecretpassword
+    url: jdbc:postgresql://localhost:5432/postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
